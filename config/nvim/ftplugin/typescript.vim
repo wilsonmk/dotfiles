@@ -1,7 +1,8 @@
 " Code Folding
-syntax region foldBraces start=/{/ end=/}/ transparent fold keepend extend
-setlocal foldmethod=syntax
-setlocal foldlevel=99
+" syntax region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+" setlocal foldmethod=syntax
+" setlocal foldlevel=99
+let javaScript_fold=1
 
 " This setup code runs once
 if !get(s:, 'ts_init', 0)
