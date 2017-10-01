@@ -366,6 +366,8 @@ let g:ale_linters = {
 
 " YouCompleteMe
 """""""""""""""""""""""""""""""""""""
+" let g:ycm_auto_trigger = 0
+let g:ycm_min_num_of_chars_for_completion = 99
 let g:ycm_always_populate_location_list = 1
 map <Leader>e :YcmDiags<CR> 
 let g:ycm_error_symbol = '✖'
