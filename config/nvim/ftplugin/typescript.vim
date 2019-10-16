@@ -1,17 +1,10 @@
-" Code Folding
-syntax region foldBraces start=/{/ end=/}/ transparent fold keepend extend
-setlocal foldmethod=syntax
-setlocal foldlevel=99
+let javaScript_fold=1
 
-" convert to object literal function syntax
-let @f = "^f:dt("
+" nvim-typescript helper mappings
+nmap <silent> <leader>d :TSDef<cr>
+nmap <silent> <leader>u :TSRefs<cr>
+nmap <silent> <leader>h :TSType<cr>
 
-" convert object literal anonymous function into class method syntax
-let @c = "^f:dt(f{%f,x"
+setl omnifunc=TSOmnicFunc
 
-let g:tss_auto_open_loclist=1
-nmap <buffer> <leader>h :TssQuickInfo<cr>
-nmap <buffer> <leader>d :TssDefinition<cr>
-nmap <buffer> <leader>u :TssReferences<cr>
-nmap <buffer> <leader>e :TssErrors<cr>
-nmap <buffer> <leader>m :TssRename "pc"<cr>
+nmap <leader>x :VimuxRunCommand('npm test')<cr>
